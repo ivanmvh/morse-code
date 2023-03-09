@@ -1,3 +1,5 @@
+# Decode Morse Code
+
 MORSE_CODE = {
   '.-' => 'A',
   '-...' => 'B',
