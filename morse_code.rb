@@ -48,6 +48,7 @@ print("\n")
 print "2-#{decode_char('-----')}" # 0
 print("\n")
 
+# decode morse word
 def decode_word(word_in_morse)
   word_arr = []
   word_in_morse.split.each do |ele|
