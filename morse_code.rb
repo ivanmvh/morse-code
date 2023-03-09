@@ -43,11 +43,6 @@ def decode_char(char)
   (MORSE_CODE[char])
 end
 
-print("1-#{decode_char('.-')}") # A
-print("\n")
-print "2-#{decode_char('-----')}" # 0
-print("\n")
-
 def decode_word(word_in_morse)
   word_arr = []
   word_in_morse.split.each do |ele|
