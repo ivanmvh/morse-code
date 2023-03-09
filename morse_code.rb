@@ -1,5 +1,4 @@
-# hash
-MORSE = {
+MORSE_CODE = {
   '.-' => 'A',
   '-...' => 'B',
   '-.-.' => 'C',
@@ -39,11 +38,12 @@ MORSE = {
 }
 
 def decode_char(char)
-  (MORSE[char])
+  (MORSE_CODE[char])
 end
 
-print decode_char(".-")
-print decode_char("-----")
+print ("1-"+decode_char(".-")) #A
+print ("\n")
+print "2-"+decode_char("-----") #0
 print ("\n")
 
 def decode_word (word_in_morse)
@@ -55,7 +55,8 @@ def decode_word (word_in_morse)
     return word_arr.join
 end    
     
-p decode_word('-- -.-- -----') 
+p "3-"+decode_word('-- -.-- -----') 
+# "MY0"
 
 def decode (message)
   arr_msg = []
@@ -64,8 +65,10 @@ def decode (message)
     # array of words ex: ["MY", "NAME", "IS"]
     arr_msg.push(decode_word(word))
   }
-  p arr_msg
   arr_msg.join(" ")
 end  
 
-p decode("-- -.--   -. .- -- .   .. ...")
+p "4-"+decode("-- -.--   -. .- -- .   .. ...")
+# "MY NAME IS"
+p "5-"+decode(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
+# "A BOX FULL OF RUBIES"
